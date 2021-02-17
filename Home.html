@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dheeran IAS Academy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bgimg {
+            background-image: url('temp.jpg');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            color: black;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 25px;
+        }
+
+        .topleft {
+            position: absolute;
+            top: 0;
+            left: 16px;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+
+        hr {
+            margin: auto;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgimg">
+
+        <div class="middle">
+            <h1>Dheeran IAS Academy</h1>
+            <hr>
+            <p id="demo" style="font-size:30px"></p>
+        </div>
+        <div class="bottomleft">
+            <p>Some text</p>
+        </div>
+    </div>
+        <form name="login">
+            Username<input type="text" name="userid" />
+            Password<input type="password" name="pswrd" />
+            <input type="button" onclick="check(this.form)" value="Login" />
+            <input type="reset" value="Cancel" />
+        </form>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "DheeranIASAcademy" && form.pswrd.value == "Dheeran@123") {
+                    window.open('Deeran_ENG.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+        </script>
+    </body>
+</html>
